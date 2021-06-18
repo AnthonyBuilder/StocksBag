@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		929E8BBC2679565D003EF4B0 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E8BBB2679565D003EF4B0 /* StockModel.swift */; };
+		929E8BBE267956E8003EF4B0 /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E8BBD267956E8003EF4B0 /* StockViewModel.swift */; };
 		92B6E6E3267900DD00B5DCAB /* StocksBagApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6E6E2267900DD00B5DCAB /* StocksBagApp.swift */; };
-		92B6E6E5267900DD00B5DCAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6E6E4267900DD00B5DCAB /* ContentView.swift */; };
+		92B6E6E5267900DD00B5DCAB /* StocksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6E6E4267900DD00B5DCAB /* StocksView.swift */; };
 		92B6E6E7267900DE00B5DCAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92B6E6E6267900DE00B5DCAB /* Assets.xcassets */; };
 		92B6E6EA267900DE00B5DCAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92B6E6E9267900DE00B5DCAB /* Preview Assets.xcassets */; };
-		92B6E6EC267900DE00B5DCAB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6E6EB267900DE00B5DCAB /* Persistence.swift */; };
 		92B6E6EF267900DE00B5DCAB /* StocksBag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92B6E6ED267900DE00B5DCAB /* StocksBag.xcdatamodeld */; };
 		92B6E6FA267900DF00B5DCAB /* StocksBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6E6F9267900DF00B5DCAB /* StocksBagTests.swift */; };
 		92B6E705267900DF00B5DCAB /* StocksBagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6E704267900DF00B5DCAB /* StocksBagUITests.swift */; };
+		92ECB8B1267ADC2900DAC9B6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECB8B0267ADC2900DAC9B6 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		929E8BBB2679565D003EF4B0 /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		929E8BBD267956E8003EF4B0 /* StockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
 		92B6E6DF267900DD00B5DCAB /* StocksBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StocksBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B6E6E2267900DD00B5DCAB /* StocksBagApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksBagApp.swift; sourceTree = "<group>"; };
-		92B6E6E4267900DD00B5DCAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		92B6E6E4267900DD00B5DCAB /* StocksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksView.swift; sourceTree = "<group>"; };
 		92B6E6E6267900DE00B5DCAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92B6E6E9267900DE00B5DCAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		92B6E6EB267900DE00B5DCAB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		92B6E6EE267900DE00B5DCAB /* StocksBag.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StocksBag.xcdatamodel; sourceTree = "<group>"; };
 		92B6E6F0267900DE00B5DCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92B6E6F5267900DF00B5DCAB /* StocksBagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StocksBagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +52,7 @@
 		92B6E700267900DF00B5DCAB /* StocksBagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StocksBagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B6E704267900DF00B5DCAB /* StocksBagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksBagUITests.swift; sourceTree = "<group>"; };
 		92B6E706267900DF00B5DCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92ECB8B0267ADC2900DAC9B6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				92B6E6E2267900DD00B5DCAB /* StocksBagApp.swift */,
-				92B6E6E4267900DD00B5DCAB /* ContentView.swift */,
+				92B6E6E4267900DD00B5DCAB /* StocksView.swift */,
 				92B6E6E6267900DE00B5DCAB /* Assets.xcassets */,
-				92B6E6EB267900DE00B5DCAB /* Persistence.swift */,
 				92B6E6F0267900DE00B5DCAB /* Info.plist */,
 				92B6E6ED267900DE00B5DCAB /* StocksBag.xcdatamodeld */,
 				92B6E6E8267900DE00B5DCAB /* Preview Content */,
+				929E8BBB2679565D003EF4B0 /* StockModel.swift */,
+				929E8BBD267956E8003EF4B0 /* StockViewModel.swift */,
+				92ECB8B0267ADC2900DAC9B6 /* APIService.swift */,
 			);
 			path = StocksBag;
 			sourceTree = "<group>";
@@ -265,9 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92B6E6EC267900DE00B5DCAB /* Persistence.swift in Sources */,
-				92B6E6E5267900DD00B5DCAB /* ContentView.swift in Sources */,
+				929E8BBC2679565D003EF4B0 /* StockModel.swift in Sources */,
+				929E8BBE267956E8003EF4B0 /* StockViewModel.swift in Sources */,
+				92B6E6E5267900DD00B5DCAB /* StocksView.swift in Sources */,
 				92B6E6E3267900DD00B5DCAB /* StocksBagApp.swift in Sources */,
+				92ECB8B1267ADC2900DAC9B6 /* APIService.swift in Sources */,
 				92B6E6EF267900DE00B5DCAB /* StocksBag.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,7 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -410,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
