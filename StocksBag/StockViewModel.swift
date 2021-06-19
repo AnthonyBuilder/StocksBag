@@ -5,23 +5,21 @@
 //  Created by Anthony on 15/06/21.
 //
 
-
-import Combine
 import SwiftUI
 
 class StockViewModel: ObservableObject {
     
     private var service: APIService
-    @Published var stockData: [StockModel] = []
+    @Published var stockData: [StockDetails] = []
     
     init() {
         self.service = APIService()
-        getStocks()
+        getStocksWithSimbol()
     }
     
-    func getStocks() {
-        self.service.fetchStocks() { stockData in
-            self.stockData = stockData
+    func getStocksWithSimbol() {
+        self.service.fetchStocks { stockData in
+            self.stockData = stockData.symbol
         }
     }
 }
