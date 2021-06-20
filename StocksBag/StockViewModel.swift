@@ -17,6 +17,7 @@ class StockViewModel: ObservableObject {
         getStocksWithSimbol()
     }
     
+    // comunicate view to API for get Stocks
     func getStocksWithSimbol() {
         self.service.fetchStocks { stockData in
             self.stockData = stockData.symbol

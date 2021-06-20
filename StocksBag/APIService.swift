@@ -17,7 +17,11 @@ class APIService {
     
     func fetchStocks(completion: @escaping (StockModel) -> ()) {
         
-        var request = URLRequest(url: URL.stocks)
+        var component = URLComponents(string: "https://twelve-data1.p.rapidapi.com/quote?")!
+        component.queryItems = [URLQueryItem(name: "symbol", value: "TSLA,AAPL,VALE,BTC")]
+        component.percentEncodedQuery = component.percentEncodedQuery?.replacingOccurrences(of: ",", with: "%2C")
+        
+        var request = URLRequest(url: component.url! as URL)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
         
@@ -33,10 +37,3 @@ class APIService {
         }.resume()
     }
 }
-
-extension URL {
-    static var stocks: URL {
-        URL(string: "https://twelve-data1.p.rapidapi.com/quote?symbol=AMZN%2CAAPL%2CSBUX%2CTSLA")! as URL
-    }
-}
-
