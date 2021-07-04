@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StockModel: Decodable {
+struct StockModel: Decodable, Hashable {
     let symbol: [StockDetails]
 
     // Define DynamicCodingKeys type needed for creating
@@ -26,7 +26,7 @@ struct StockModel: Decodable {
     }
     
     init(from decoder: Decoder) throws {
-        // Decoding container using DynamicCodingKeysß
+        // Decoding container using DynamicCodingKeys
         let container = try decoder.container(keyedBy: DynamicCodingKeys.self)
         var tempArray = [StockDetails]()
         
@@ -39,7 +39,6 @@ struct StockModel: Decodable {
         // Finished assign tempArray to StockDetails
         symbol = tempArray
     }
-    
 }
 
 struct StockDetails: Decodable, Hashable {

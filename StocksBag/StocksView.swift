@@ -2,35 +2,30 @@
 //  ContentView.swift
 //  StocksBag
 //
-//  Created by Anthony on 15/06/21.q
+//  Created by Anthony on 15/06/21
 //
 
 import SwiftUI
-import CoreData
 
 struct StocksView: View {
     
     @ObservedObject var stockViewModel = StockViewModel()
-    @State var showStockDetails: Bool = false
+    @State private var editMode: EditMode = .inactive
+    @State private var showNewStock: Bool = false
     
     var body: some View  {
         NavigationView {
-            List(stockViewModel.stockData, id: \.self) { stock in
-                NavigationLink(destination: Text("Fechamento \(stock.close)")) {
+            List(stockViewModel.stockDetails, id: \.symbol) { symbol in
+                NavigationLink(destination: Text("Fechamento \(symbol.currency)")) {
                     VStack(alignment: .leading) {
-                        Text(stock.symbol)
-                        Text("Abertura \(stock.open)").foregroundColor(.red)
-                    }.onTapGesture {
-                        showStockDetails = true
+                        Text(symbol.symbol)
+                        Text(symbol.exchange)
                     }
                 }
-
-            }
-            .navigationBarTitle("Stocks")
-            .navigationBarItems(trailing: Image(systemName: "line.horizontal.3.decrease.circle"))
+            }.navigationBarItems(trailing: Button(action: { showNewStock = true }, label: { Image(systemName: "plus")}))
+        }
+        .sheet(isPresented: $showNewStock) {
+            NewStockView().environmentObject(self.stockViewModel)
         }
     }
 }
-
-
-
