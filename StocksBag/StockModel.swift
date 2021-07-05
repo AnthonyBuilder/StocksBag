@@ -14,28 +14,28 @@ struct StockModel: Decodable, Hashable {
     // decoding container from JSONDecoder
     private struct DynamicCodingKeys: CodingKey {
         var intValue: Int?
-        
+
         init?(intValue: Int) {
             return nil
         }
-        
+
         var stringValue: String
         init?(stringValue: String) {
             self.stringValue = stringValue
         }
     }
-    
+
     init(from decoder: Decoder) throws {
         // Decoding container using DynamicCodingKeys
         let container = try decoder.container(keyedBy: DynamicCodingKeys.self)
         var tempArray = [StockDetails]()
-        
+
         // Loop turn key in container
         for key in container.allKeys {
             let decodedObject = try container.decode(StockDetails.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
             tempArray.append(decodedObject)
         }
-        
+
         // Finished assign tempArray to StockDetails
         symbol = tempArray
     }

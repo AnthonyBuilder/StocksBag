@@ -17,6 +17,7 @@
 		92B6E6FA267900DF00B5DCAB /* StocksBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6E6F9267900DF00B5DCAB /* StocksBagTests.swift */; };
 		92B6E705267900DF00B5DCAB /* StocksBagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B6E704267900DF00B5DCAB /* StocksBagUITests.swift */; };
 		92ECB8B1267ADC2900DAC9B6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECB8B0267ADC2900DAC9B6 /* APIService.swift */; };
+		92F31CDA269349CA00A72E7F /* EditableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F31CD9269349CA00A72E7F /* EditableText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		92B6E704267900DF00B5DCAB /* StocksBagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksBagUITests.swift; sourceTree = "<group>"; };
 		92B6E706267900DF00B5DCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92ECB8B0267ADC2900DAC9B6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		92F31CD9269349CA00A72E7F /* EditableText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditableText.swift; path = ../../../../Downloads/EditableText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		92B6E6E1267900DD00B5DCAB /* StocksBag */ = {
 			isa = PBXGroup;
 			children = (
+				92F31CD9269349CA00A72E7F /* EditableText.swift */,
 				92B6E6E2267900DD00B5DCAB /* StocksBagApp.swift */,
 				92B6E6E4267900DD00B5DCAB /* StocksView.swift */,
 				92B6E6E6267900DE00B5DCAB /* Assets.xcassets */,
@@ -274,6 +277,7 @@
 				929E8BBC2679565D003EF4B0 /* StockModel.swift in Sources */,
 				929E8BBE267956E8003EF4B0 /* StockViewModel.swift in Sources */,
 				92B6E6E5267900DD00B5DCAB /* StocksView.swift in Sources */,
+				92F31CDA269349CA00A72E7F /* EditableText.swift in Sources */,
 				92B6E6E3267900DD00B5DCAB /* StocksBagApp.swift in Sources */,
 				920F91D9269260DA00C9CA11 /* NewStockView.swift in Sources */,
 				92ECB8B1267ADC2900DAC9B6 /* APIService.swift in Sources */,

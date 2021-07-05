@@ -8,24 +8,25 @@
 import SwiftUI
 
 struct StocksView: View {
-    
+
     @ObservedObject var stockViewModel = StockViewModel()
-    @State private var editMode: EditMode = .inactive
     @State private var showNewStock: Bool = false
-    
+
     var body: some View  {
         NavigationView {
-            List(stockViewModel.stockDetails, id: \.symbol) { symbol in
-                NavigationLink(destination: Text("Fechamento \(symbol.currency)")) {
-                    VStack(alignment: .leading) {
-                        Text(symbol.symbol)
-                        Text(symbol.exchange)
-                    }
+            List {
+                ForEach(stockViewModel.stockDetails, id: \.symbol) { symbol in
+                    NavigationLink(destination: Text("Fechamento \(symbol.close)")) {
+                        VStack(alignment: .leading) {
+                            Text(symbol.symbol)
+                            Text(symbol.high).font(.caption)
+                        }
+                    }.navigationBarItems(trailing: Button(action: { showNewStock = true }, label: { Image(systemName: "plus")}))
+                     .navigationTitle("Stocks")
                 }
-            }.navigationBarItems(trailing: Button(action: { showNewStock = true }, label: { Image(systemName: "plus")}))
-        }
-        .sheet(isPresented: $showNewStock) {
-            NewStockView().environmentObject(self.stockViewModel)
+            }
+        }.sheet(isPresented: $showNewStock) {
+            NewStockView(isShowing: $showNewStock).environmentObject(self.stockViewModel)
         }
     }
 }
