@@ -23,7 +23,8 @@ class StockViewModel: ObservableObject {
             self.stockDetails = stockData.symbol
         }
     }
-
+    
+    // add symbol on APIService symbol var
     func addSymbol(name symbol: String) {
         service.symbol += "\(symbol),"
         getStocksWithSimbol()
