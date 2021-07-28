@@ -14,4 +14,4 @@
 - [Linkedin](https://www.linkedin.com/in/anthony-josé-94b151144/)
 - [Instagram](https://www.instagram.com/traphael.dev/)
 
-Thyago Raphael - O Noob do iOS  ♥
+Anthony José - Futuro desenvolvedor iOS
