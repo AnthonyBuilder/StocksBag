@@ -12,6 +12,6 @@
 ## 🔖 Redes Sociais
 
 - [Linkedin](https://www.linkedin.com/in/anthony-josé-94b151144/)
-- [Instagram](https://www.instagram.com/traphael.dev/)
+- [Instagram](https://www.instagram.com/start_a193/)
 
 Anthony José - Futuro desenvolvedor iOS
