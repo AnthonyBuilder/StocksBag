@@ -1,6 +1,6 @@
-# StocksBag
+
 <h1 align="center">
-    Aplicação iOS em SwiftUI sobre bolsa de valores
+    StocksBag - Aplicação iOS em SwiftUI sobre bolsa de valores
 </h1
 
 ## 🔖 Principais tópicos usados
