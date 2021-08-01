@@ -14,4 +14,9 @@
 - [Linkedin](https://www.linkedin.com/in/anthony-josé-94b151144/)
 - [Instagram](https://www.instagram.com/start_a193/)
 
+## 🚀 Imagens do app
+    
+![Alt Text](https://github.com/AnthonyBuilder/StocksBag/blob/main/assets/stock1.gif)
+![Alt Text](https://github.com/AnthonyBuilder/StocksBag/blob/main/assets/stock2.gif)
+    
 Anthony José - Futuro desenvolvedor iOS
