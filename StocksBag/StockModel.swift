@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StockModel: Decodable, Hashable {
-    let symbol: [StockDetails]
+    var datum: [StockDetails]
 
     // Define DynamicCodingKeys type needed for creating
     // decoding container from JSONDecoder
@@ -37,11 +37,23 @@ struct StockModel: Decodable, Hashable {
         }
 
         // Finished assign tempArray to StockDetails
-        symbol = tempArray
+        datum = tempArray
     }
 }
 
+// MARK: - StockDetails
 struct StockDetails: Decodable, Hashable {
     let symbol, name, exchange, currency: String
     let open, datetime, high, low, close: String
 }
+
+// MARK: - SymbolModel
+struct SymbolModel: Codable, Hashable {
+    let data: [Datum]
+}
+
+// MARK: - Datum
+struct Datum: Codable, Hashable {
+    let symbol, name, type: String
+}
+

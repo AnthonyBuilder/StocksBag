@@ -8,30 +8,46 @@
 import SwiftUI
 
 struct NewStockView: View {
+    
     @EnvironmentObject var stockViewModel: StockViewModel
     @State private var nameStockSymbol: String = ""
+    @State private var selection = Set<String>()
     @Binding var isShowing: Bool
     
     var body: some View {
-        VStack(spacing: 0) {
-            ZStack {
-                Text("Novo Símbolo").font(.headline).padding()
-                HStack {
-                    Spacer()
-                    Button(action: { isShowing = false }, label: { Text("Concluido") }).padding()
-                }
-            }
-            Divider()
-            Form {
-                Section {
-                    TextField("Símbolo da Bolsa", text: $nameStockSymbol,   onEditingChanged: { began in
-                        if !began {
-                            stockViewModel.addSymbol(name: self.nameStockSymbol.uppercased())
+        NavigationView {
+            if #available(iOS 15.0, *) {
+                List(searchResults, id: \.symbol, selection: $selection) { symbol in
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(symbol.symbol).fontWeight(.bold).font(.headline)
+                            Text(symbol.name).font(.subheadline)
                         }
-                    }).padding()
-                }
+                        Spacer()
+                        Text(symbol.type).font(.caption2).foregroundColor(.secondary)
+                    }
+                }.searchable(text: $nameStockSymbol)
+                    .navigationBarItems(leading: Button(action: {
+                        stockViewModel.addSymbol(name: selection)
+                        isShowing = false
+                    }, label: { Text("Concluido") }))
+                 .navigationTitle("Adicionar Símbolo")
+                 .toolbar {
+                     EditButton()
+                 }
+            } else {
+                // Fallback on earlier versions
             }
         }
     }
+
+    var searchResults: [Datum] {
+        if nameStockSymbol.isEmpty {
+            return stockViewModel.symbols.removingDuplicates()
+        } else {
+            return stockViewModel.symbols.filter { $0.symbol.contains(nameStockSymbol)}
+        }
+    }
 }
+
 

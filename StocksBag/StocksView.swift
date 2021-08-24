@@ -11,18 +11,21 @@ struct StocksView: View {
 
     @ObservedObject var stockViewModel = StockViewModel()
     @State private var showNewStock: Bool = false
+    @State private var symbol: String = ""
 
-    var body: some View  {
+    var body: some View {
         NavigationView {
             List {
                 ForEach(stockViewModel.stockDetails, id: \.symbol) { symbol in
-                    NavigationLink(destination: Text("Fechamento \(symbol.close)")) {
+                    NavigationLink(destination: StockDetailsView(stockModel: symbol)) {
                         VStack(alignment: .leading) {
-                            Text(symbol.symbol)
-                            Text(symbol.high).font(.caption)
+                            Text(symbol.symbol).fontWeight(.bold)
+                            Text(symbol.high).font(.caption).foregroundColor(.secondary)
                         }
-                    }.navigationBarItems(trailing: Button(action: { showNewStock = true }, label: { Image(systemName: "plus")}))
-                     .navigationTitle("Stocks")
+                    }.navigationBarItems(trailing:
+                                            Button(action: { showNewStock = true },
+                                                   label: { Image(systemName: "plus")})
+                    ).navigationTitle("Stocks")
                 }
             }
         }.sheet(isPresented: $showNewStock) {
